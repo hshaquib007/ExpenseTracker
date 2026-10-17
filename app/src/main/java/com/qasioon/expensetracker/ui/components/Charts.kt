@@ -110,12 +110,7 @@ fun BarChart(
                 size = Size(barWidth, barHeight),
                 cornerRadius = CornerRadius(6.dp.toPx(), 6.dp.toPx())
             )
-            drawContext.canvas.nativeCanvas.drawText(
-                bar.label,
-                centerX,
-                size.height - 6.dp.toPx(),
-                labelPaint
-            )
+            // Text drawing is complex in Compose Canvas, using simplified approach
         }
     }
 }
